@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In - Music App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <header>
+    <div class="header">
+    <h1>Music App</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+       
+        <li><a href="favourites.html">Favourites</a></li>
+       
+        <li><a href="about.html">About</a></li>
+      
+        <li><a href="signout.html" id="signout">Sign In</a></li>
+      </ul>
+    </nav>
+  </div></header>
+
+  <main>
+  <div id="signed-in-message" style="display: none; text-align: center; margin-top: 30px;">
+    <h2>You are already signed in!</h2>
+    <p><a href="#" id="signout-link">Click here to Sign Out</a></p>
+  </div>
+
+  <div id="signin-form-container">
+    <h2 style="text-align: center;">Sign In</h2><br/>
+    <form id="signin-form">
+      <label for="Email">Enter Your Email ID:</label>
+      <input type="email" id="email" placeholder="Enter your email" required><br/><br/>
+      <label for="password">Enter Your Password:</label>
+      <input type="password" id="password" placeholder="Enter your password" required><br/><br/>
+      <button type="submit">Sign In</button>
+    </form>
+  </div>
+</main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h3>About Us</h3>
+        <p>We are passionate about bringing the best music experience to our users. Our platform allows you to explore new songs, create playlists, and stay updated with the latest trends in music.</p>
+        <p><a href="about.html">Learn more</a></p>
+      </div>
+  
+      <div class="footer-section links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          
+          <li><a href="favourites.html">Favourites</a></li>
+         
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="signin.html">Sign In</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section social-media">
+        <h3>Follow Us</h3>
+        <p>Stay connected with us on social media:</p>
+        <ul>
+          <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+          <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+          <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+          <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section legal">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-service.html">Terms of Service</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2024 My-Music App. All rights reserved.</p>
+      <p>Built with love by [Your Company/Name].</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("signin-form");
+    const signedInMsg = document.getElementById("signed-in-message");
+    const formContainer = document.getElementById("signin-form-container");
+    const signoutLink = document.getElementById("signout-link");
+
+    // Check if user is already signed in
+    if (localStorage.getItem("isSignedIn") === "true") {
+      signedInMsg.style.display = "block";
+      formContainer.style.display = "none";
+    }
+
+    // Handle form submit
+    form?.addEventListener("submit", (e) => {
+      e.preventDefault();
+      // Here you could validate email/password if needed
+      localStorage.setItem("isSignedIn", "true");
+      alert("You are signed in!");
+      location.reload(); // reload to show message
+    });
+
+    // Handle sign out
+    signoutLink?.addEventListener("click", () => {
+      localStorage.removeItem("isSignedIn");
+      alert("You are signed out.");
+      location.reload();
+    });
+  });
+</script>
+
+</body>
+</html> 

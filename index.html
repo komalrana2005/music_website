@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wish Music</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+
+</head>
+<body>
+  <header>
+    <div class="header">
+      <h1>Wish Music</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="favourites.html">Favourites</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="signin.html" id="signin">Sign In</a></li>
+          <form id="searchForm" style="margin-left: auto;">
+  <input type="text" id="searchInput" placeholder="Search for songs..." required />
+  <button type="submit">Search</button>
+</form>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    
+
+    <section>
+      
+      <div id="results" class="results" style="display: flex; flex-wrap: wrap; gap: 20px;"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h3>About Us</h3>
+        <p>We are passionate about bringing the best music experience to our users. Our platform allows you to explore new songs, create playlists, and stay updated with the latest trends in music.</p>
+        <p><a href="about.html">Learn more</a></p>
+      </div>
+
+      <div class="footer-section links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="favourites.html">Favourites</a></li>
+          <li><a href="about.html">About</a></li>
+          
+          <li><a href="signin.html" id="footer-auth-link">Sign In</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section social-media">
+        <h3>Follow Us</h3>
+        <p>Stay connected with us on social media:</p>
+        <ul>
+          <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+          <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+          <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+          <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section legal">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-service.html">Terms of Service</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 My-Music App. All rights reserved.</p>
+      <p>Built with love by [Your Company/Name].</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
